@@ -1,4 +1,4 @@
-package com.kronos.microtest.finder;
+package org.utilities.microtest.finder;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
@@ -75,7 +75,7 @@ public class FindTestHelper {
 		try {
 			Files.walkFileTree(rootPathMicroTest, new SimpleFileVisitor<Path>() {
 				@Override
-				public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+				public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
 
 					if (file.toFile().exists()) {
 						// System.out.println("file: " + file.toString());
@@ -98,7 +98,7 @@ public class FindTestHelper {
 				}
 
 				@Override
-				public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
+				public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
 					// System.out.println("pre visit dir:" + dir);
 					if (dir.toString().endsWith("klg") || dir.toString().endsWith("dralasoft")) {
 						// System.out.println("! ! ! ! !Skipping :" +

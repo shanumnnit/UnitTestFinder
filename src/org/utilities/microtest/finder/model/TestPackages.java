@@ -1,4 +1,4 @@
-package com.kronos.microtest.finder.model;
+package org.utilities.microtest.finder.model;
 
 import java.util.HashSet;
 import java.util.Set;
